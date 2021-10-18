@@ -5,9 +5,10 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=h, initial-scale=1.0" />
 		<title>Brief Api Rest - Utilisateurs</title>
-		<link rel="stylesheet" href="../assets/css/app.css" />
-		<link rel="stylesheet" href="../assets/css/navbar.css" />
-		<link rel="stylesheet" href="../assets/css/pages/users.css" />
+		<link rel="stylesheet" href="../../assets/css/app.css" />
+		<link rel="stylesheet" href="../../assets/css/navbar.css" />
+		<link rel="stylesheet" href="../../assets/css/json.css" />
+		<link rel="stylesheet" href="../../assets/css/pages/users/index.css" />
 	</head>
 	<body>
 		<header class="header">
@@ -15,7 +16,7 @@
 				<a href="/src/index.html" class="nav-logo">Api Rest</a>
 				<ul class="nav-menu">
 					<li class="nav-item">
-						<a href="/src/pages/users.html" class="nav-link active">Utilisateurs</a>
+						<a href="/src/pages/users/index.html" class="nav-link active">Utilisateurs</a>
 					</li>
 					<li class="nav-item">
 						<a href="/src/pages/auth.html" class="nav-link">Connexion</a>
@@ -29,17 +30,17 @@
 			</nav>
 		</header>
 
+		<div class="json-response">
+			<h1>Résultat de la requête API</h1>
+			<pre><code id="json-result"></code></pre>
+		</div>
+
 		<main>
 			<h1>Liste des utilisateurs</h1>
-			<div class="users">
-				<div>
-					<p><strong>Denquin Maxence</strong></p>
-					<p>denquin.maxence.pro@gmail.com</p>
-					<!-- <img src="" alt=""> -->
-				</div>
-			</div>
+			<a href="/src/pages/users/add.html" class="btn">Ajouter un utilisateur</a>
+			<div class="users"></div>
 		</main>
 	</body>
-	<script src="../assets/js/users.js"></script>
-	<script src="../assets/js/navbar.js"></script>
+	<script src="../../assets/js/users/index.js"></script>
+	<script src="../../assets/js/navbar.js"></script>
 </html>

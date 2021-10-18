@@ -40,13 +40,13 @@
 }
 
 .nav-link:hover, .nav-link.active {
-	color: #482ff7;
+	color: #3498db;
 }
 
 .nav-logo {
 	font-size: 1.7rem;
 	font-weight: 500;
-	color: #482ff7;
+	color: #3498db;
 }
 
 @media only screen and (max-width: 768px) {

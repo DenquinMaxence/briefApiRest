@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=h, initial-scale=1.0" />
+		<title>Brief Api Rest - Utilisateurs</title>
+		<link rel="stylesheet" href="../../assets/css/app.css" />
+		<link rel="stylesheet" href="../../assets/css/navbar.css" />
+		<link rel="stylesheet" href="../../assets/css/json.css" />
+		<link rel="stylesheet" href="../../assets/css/pages/users/add.css" />
+	</head>
+	<body>
+		<header class="header">
+			<nav class="navbar">
+				<a href="/src/index.html" class="nav-logo">Api Rest</a>
+				<ul class="nav-menu">
+					<li class="nav-item">
+						<a href="/src/pages/users/index.html" class="nav-link active"
+							>Utilisateurs</a
+						>
+					</li>
+					<li class="nav-item">
+						<a href="/src/pages/auth.html" class="nav-link">Connexion</a>
+					</li>
+				</ul>
+				<div class="hamburger">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
+				</div>
+			</nav>
+		</header>
+
+		<div class="json-response" id="json-container" style="display: none">
+			<h1>Résultat de la requête API</h1>
+			<pre><code id="json-result"></code></pre>
+		</div>
+
+		<main>
+			<div class="container">
+				<div class="card">
+					<div class="card-body">
+						<form class="form" id="newUserForm">
+							<div class="title">Formulaire</div>
+							<div class="subtitle">Créons un nouvel utilisateur !</div>
+							<div class="input-container ic1">
+								<input
+									id="firstname"
+									name="first_name"
+									class="input"
+									type="text"
+									placeholder=""
+									required
+								/>
+								<div class="cut cut-medium"></div>
+								<label for="firstname" class="placeholder">Prénom</label>
+							</div>
+							<div class="input-container ic2">
+								<input
+									id="lastname"
+									name="last_name"
+									class="input"
+									type="text"
+									placeholder=""
+									required
+								/>
+								<div class="cut cut-short"></div>
+								<label for="lastname" class="placeholder">Nom</label>
+							</div>
+							<div class="input-container ic2">
+								<input
+									id="email"
+									name="email"
+									class="input"
+									type="email"
+									placeholder=""
+									required
+								/>
+								<div class="cut"></div>
+								<label for="email" class="placeholder">Adresse mail</label>
+							</div>
+							<button type="submit" class="submit">Ajouter</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<h1 style="display: none">
+				Redirection vers la page utilisateurs dans <span id="counter">10</span> secondes
+			</h1>
+		</main>
+	</body>
+	<script src="../../assets/js/users/add.js"></script>
+	<script src="../../assets/js/navbar.js"></script>
+</html>

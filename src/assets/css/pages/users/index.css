@@ -1,0 +1,51 @@
+.users {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-flow: wrap;
+	font-family: sans-serif;
+}
+
+.users > div {
+	margin: 0 1rem 2rem 1rem;
+	text-align: center;
+}
+
+img {
+	display: inline-block;
+	max-width: 100%;
+	margin: 1rem;
+}
+
+/* ---------- BUTTONS STYLE START ----------*/
+
+.btn {
+	font-family: lato, sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	letter-spacing: 0.1em;
+	text-decoration: none;
+	color: #ffffff;
+	display: inline-block;
+	padding: 10px 40px 10px 40px;
+	position: relative;
+	border: 3px solid #969090;
+	background-color: #1f2227;
+	border-radius: 25px;
+	margin-bottom: 1rem;
+}
+
+.btn-sm {
+	font-size: 0.8em;
+	padding: 10px 20px 10px 20px;
+}
+
+.btn-warning {
+	background-color: #f39c12;
+}
+
+.btn-danger {
+	background-color: #e74c3c;
+}
+
+/* ---------- BUTTONS STYLE END ----------*/
