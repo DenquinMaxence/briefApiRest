@@ -22,8 +22,6 @@
 	margin: 2rem;
 }
 
-/*  */
-
 .form {
 	background-color: #15172b;
 	border-radius: 20px;
@@ -93,6 +91,9 @@
 
 .cut-medium {
 	width: 62px;
+}
+.cut-large {
+	width: 170px;
 }
 
 .input:focus ~ .cut,

@@ -4,35 +4,11 @@ const counterRedirect = document.getElementById('counter');
 const jsonContainer = document.getElementById('json-container');
 const jsonResult = document.getElementById('json-result');
 
-// Allows you to make JSON more visually pleasing, code found on : http://jsfiddle.net/unLSJ/
-const library = {
-	replacer: function (match, pIndent, pKey, pVal, pEnd) {
-		const key = '<span class=json-key>';
-		const val = '<span class=json-value>';
-		const str = '<span class=json-string>';
-		let r = pIndent || '';
-		if (pKey) r = r + key + pKey.replace(/[": ]/g, '') + '</span>: ';
-		if (pVal) r = r + (pVal[0] == '"' ? str : val) + pVal + '</span>';
-		return r + (pEnd || '');
-	},
-	prettyPrint: function (obj) {
-		var jsonLine = /^( *)("[\w]+": )?("[^"]*"|[\w.+-]*)?([,[{])?$/gm;
-		return JSON.stringify(obj, null, 3)
-			.replace(/&/g, '&amp;')
-			.replace(/\\"/g, '&quot;')
-			.replace(/</g, '&lt;')
-			.replace(/>/g, '&gt;')
-			.replace(jsonLine, library.replacer);
-	},
-};
-
 newUserForm.addEventListener('submit', (e) => {
 	e.preventDefault();
 
 	const formData = new FormData(newUserForm);
-	const dataToInsert = {
-		avatar: 'http://lorempixel.com/128/128/',
-	};
+	const dataToInsert = {};
 
 	formData.forEach((value, key) => {
 		dataToInsert[key] = value;

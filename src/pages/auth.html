@@ -3,10 +3,12 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=h, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Brief Api Rest - Authentification</title>
 		<link rel="stylesheet" href="../assets/css/app.css" />
 		<link rel="stylesheet" href="../assets/css/navbar.css" />
+		<link rel="stylesheet" href="../assets/css/json.css" />
+		<link rel="stylesheet" href="../assets/css/pages/users/add.css" />
 	</head>
 	<body>
 		<header class="header">
@@ -28,8 +30,53 @@
 			</nav>
 		</header>
 
-		<main>MAIN</main>
+		<div class="json-response" id="json-container" style="display: none">
+			<h1>Résultat de la requête API</h1>
+			<pre><code id="json-result"></code></pre>
+		</div>
+
+		<main>
+			<div class="container">
+				<div class="card">
+					<div class="card-body">
+						<form class="form" id="loginForm">
+							<div class="title">Formulaire</div>
+							<div class="subtitle">Connectons-nous !</div>
+							<div class="input-container ic1">
+								<input
+									id="email"
+									name="email"
+									class="input"
+									type="email"
+									placeholder=""
+									required
+								/>
+								<div class="cut"></div>
+								<label for="email" class="placeholder">Adresse mail</label>
+							</div>
+							<div class="input-container ic2">
+								<input
+									id="password"
+									name="password"
+									class="input"
+									type="password"
+									placeholder=""
+									required
+								/>
+								<div class="cut"></div>
+								<label for="password" class="placeholder">Mot de passe</label>
+							</div>
+							<button type="submit" class="submit">Se connecter</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<h1 style="display: none">
+				Redirection vers la page utilisateurs dans <span id="counter">10</span> secondes
+			</h1>
+		</main>
 	</body>
-	<script src="../assets/js/users.js"></script>
+	<script src="../assets/js/prettyPrint.js"></script>
+	<script src="../assets/js/auth.js"></script>
 	<script src="../assets/js/navbar.js"></script>
 </html>
