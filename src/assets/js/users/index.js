@@ -1,7 +1,7 @@
 const mainUsers = document.querySelector('.users');
 const jsonResult = document.getElementById('json-result');
 
-fetch('https://reqres.in/api/users')
+fetch('https://reqres.in/api/users?page=2')
 	.then((res) => res.json().then((response) => ({ status: res.status, response })))
 	.then((result) => {
 		const users = result.response.data;
@@ -12,7 +12,7 @@ fetch('https://reqres.in/api/users')
 				const htmlDiv = `
                     <div>
                         <p>
-                            <strong>${last_name} ${first_name}</strong>
+                            <strong>${id} - ${last_name} ${first_name}</strong>
                         </p>
                         <p>${email}</p>
                         <img src="${avatar}" alt="user-${id}-pic">
