@@ -32,7 +32,7 @@ newUserForm.addEventListener('submit', (e) => {
 			setInterval(() => {
 				counter--;
 				counterRedirect.innerHTML = counter;
-				if (counter === 0) window.location = '/src/pages/users/index.html';
+				if (counter === 0) window.location = '/briefApiRest/src/pages/users/index.html';
 			}, 1000);
 		});
 
